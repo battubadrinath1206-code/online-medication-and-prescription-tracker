@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prescripto</title>
+    <style>
+         :root {
+            --brand: #2563eb;
+            --accent: #10b981;
+            --ink: #fef08a;
+            --bg: linear-gradient(135deg, #0b1220 0%, #111827 30%, #1f2937 55%, #2563eb 80%, #10b981 100%);
+            --card: #ffffff;
+        }
+        
+        body {
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+            margin: 0;
+            color: var(--ink);
+            background: var(--bg);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(90deg, var(--brand), var(--accent));
+            color: #fff;
+        }
+        
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
+        
+        .brand svg {
+            width: 28px;
+            height: 28px;
+        }
+        
+        .nav-actions {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        
+        .icon-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.18);
+            color: #fff;
+            text-decoration: none;
+            backdrop-filter: blur(6px);
+        }
+        
+        .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.28);
+        }
+        
+        .icon-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+        
+        main {
+            padding: 2rem 1.5rem;
+            display: grid;
+            gap: 2rem;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        
+        .hero {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .hero h2 {
+            font-size: 2rem;
+            margin: 0 0 0.5rem;
+            color: var(--ink);
+        }
+        
+        .hero p {
+            margin: 0;
+            opacity: 0.85;
+        }
+        
+        .hero .media {
+            position: relative;
+        }
+        
+        .hero img {
+            width: 100%;
+            border-radius: 16px;
+            object-fit: cover;
+            max-height: 320px;
+            box-shadow: 0 20px 40px rgba(12, 22, 33, 0.2);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.75rem;
+        }
+        
+        .gallery img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(12, 22, 33, 0.15);
+        }
+        
+        .card {
+            background: var(--card);
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+            color: #0b1220;
+        }
+        
+        .cta {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1rem;
+            border-radius: 10px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .btn-primary {
+            background: var(--brand);
+            color: #fff;
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--brand);
+            color: var(--brand);
+            background: #fff;
+        }
+    </style>
+    <script></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="brand">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            <span>Prescripto</span>
+        </div>
+        <div class="nav-actions">
+            <a class="icon-btn" href="login.html" title="Login">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M10 17l-5-5 5-5M5 12h12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Login</span>
+            </a>
+            <a class="icon-btn" href="signup.html" title="Register">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 4a4 4 0 110 8 4 4 0 010-8zM6 20a6 6 0 1112 0" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M19 8v4M21 10h-4" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+                <span>Register</span>
+            </a>
+        </div>
+    </div>
+    <main>
+        <section class="hero">
+            <div>
+                <h2>Prescripto</h2>
+                <p>Unified prescriptions, reminders, and pharmacy stock—designed for patients and clinicians.</p>
+                <p style="font-style:italic; margin-top:0.5rem;">“Because every dose matters, and every life deserves care.”</p>
+                <div class="cta">
+                    <a class="btn btn-primary" href="signup.html">Get Started</a>
+                    <a class="btn btn-outline" href="login.html">I already have an account</a>
+                </div>
+            </div>
+            <div class="media">
+                <img alt="Healthcare dashboard" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'><rect width='100%25' height='100%25' fill='%23111111'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-size='42' font-family='Arial,sans-serif'>Prescripto%20Dashboard</text></svg>"
+                />
+            </div>
+        </section>
+
+        <section class="grid">
+            <div class="card">
+                <strong>Patients</strong>
+                <p>Log medicines, receive reminders, and view approved prescriptions.</p>
+            </div>
+            <div class="card">
+                <strong>Doctors</strong>
+                <p>Issue, validate, and renew prescriptions with adherence analytics.</p>
+            </div>
+            <div class="card">
+                <strong>Pharmacists</strong>
+                <p>Manage inventory, monitor expiries, and fetch drug details via APIs.</p>
+            </div>
+        </section>
+        <section class="gallery">
+            <img alt="Digital prescriptions" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='300'><rect width='100%25' height='100%25' fill='%23111111'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-size='32' font-family='Arial,sans-serif'>Digital%20Prescriptions</text></svg>"
+            />
+            <img alt="Inventory management" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='300'><rect width='100%25' height='100%25' fill='%23111111'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-size='32' font-family='Arial,sans-serif'>Inventory%20Management</text></svg>"
+            />
+            <img alt="Dose reminders" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='300'><rect width='100%25' height='100%25' fill='%23111111'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-size='32' font-family='Arial,sans-serif'>Dose%20Reminders</text></svg>"
+            />
+        </section>
+        <section class="grid">
+            <div class="card">
+                <strong>Digital Prescriptions</strong>
+                <p>Issue, validate, renew; maintain audit trails and version history.</p>
+                <img alt="Prescription form" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'><rect width='100%25' height='100%25' fill='%23111111'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-size='38' font-family='Arial,sans-serif'>Prescription%20Form</text></svg>"
+                    style="width:100%; border-radius:10px; margin-top:0.5rem;" />
+            </div>
+            <div class="card">
+                <strong>Medication Reminders</strong>
+                <p>Daily, weekly, and custom schedules with adherence tracking.</p>
+                <img alt="Reminder schedule" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'><rect width='100%25' height='100%25' fill='%23111111'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-size='38' font-family='Arial,sans-serif'>Reminder%20Schedule</text></svg>"
+                    style="width:100%; border-radius:10px; margin-top:0.5rem;" />
+            </div>
+            <div class="card">
+                <strong>Inventory & Alerts</strong>
+                <p>Low-stock notifications, expiry tracking, and batch management.</p>
+                <img alt="Pharmacy stock" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'><rect width='100%25' height='100%25' fill='%23111111'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-size='38' font-family='Arial,sans-serif'>Pharmacy%20Stock</text></svg>"
+                    style="width:100%; border-radius:10px; margin-top:0.5rem;" />
+            </div>
+        </section>
+        <section class="grid">
+            <div class="card">
+                <strong>Drug Info & Interactions</strong>
+                <p>API integration for composition, contraindications, and safety checks.</p>
+                <img alt="Drug info API" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'><rect width='100%25' height='100%25' fill='%23111111'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-size='38' font-family='Arial,sans-serif'>Drug%20Info%20API</text></svg>"
+                    style="width:100%; border-radius:10px; margin-top:0.5rem;" />
+            </div>
+            <div class="card">
+                <strong>Analytics & Dashboards</strong>
+                <p>Adherence trends, prescription stats, top-selling drugs, and stock movement.</p>
+                <img alt="Analytics dashboard" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'><rect width='100%25' height='100%25' fill='%23111111'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-size='38' font-family='Arial,sans-serif'>Analytics%20Dashboard</text></svg>"
+                    style="width:100%; border-radius:10px; margin-top:0.5rem;" />
+            </div>
+            <div class="card">
+                <strong>Role-Based Access</strong>
+                <p>Patients, Doctors, Pharmacists, Admin—secure JWT authorization.</p>
+                <img alt="Access control" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'><rect width='100%25' height='100%25' fill='%23111111'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-size='38' font-family='Arial,sans-serif'>Access%20Control</text></svg>"
+                    style="width:100%; border-radius:10px; margin-top:0.5rem;" />
+            </div>
+        </section>
+
+
+    </main>
+</body>
